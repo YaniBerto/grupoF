@@ -257,12 +257,15 @@ header img
 }
 h1
 {
-    font-size: 40px;
+    font-size: 20px;
+    margin: 5px;
+    justify-content: center;
 }
 aside
 {
     display: flex;
     justify-content: space-evenly;
+    background-image: linear-gradient(to bottom, green, darkgoldenrod);
 }
 form
     {
@@ -275,11 +278,13 @@ form
 .disponibilidad
 {
     width: 1920px;
+    height: 200px;
+    
     }  
 .mapa{
     width: 800px;
 } 
-.youtube{
+.youtube {
     width: 800px;
 }        
 .mapayoutube {
@@ -295,6 +300,7 @@ form
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
     text-align: justify;
+    font-size: medium;
 }
 .contacto
 {
@@ -323,9 +329,9 @@ form
     gap: 5px;
 }
 .texto {
-margin: 2px;
-padding: 2px;
-height: 150px;
+margin: 5px;
+padding: 5px;
+height: 100px;
 background-color: #073b3a;
 align-items: center;
 }

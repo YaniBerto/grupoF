@@ -27,7 +27,7 @@ a {
     justify-items: center;
     align-items: center;
     color: rgb(175, 79, 1);
-    width: 320px;
+    width: 100%;
     background-color: #0B6E4F;
 }                   
 header img
@@ -41,8 +41,8 @@ h1
     justify-content: first baseline;
     padding: 2px;
     font-family: 'Lucida Sans', cursive;
-    font-size: small;
     color: #DDB771;
+    size: 50px;
     
 }
 .footer{
@@ -57,15 +57,16 @@ footer
 .fondo{
     background-image: url(./imagenes/HAMAY/COMPLEJO/Vasantarelli-web-42.jpg);
     display: flex;
-    width: 320px;
+    width: 3210px;
     flex-wrap: wrap;
+    justify-content: center;
 
 }   
 .grids
 {
     display: grid;
-    grid-template-columns: 1, 1fr;
-    grid-template-rows: repeat (3, 1fr);
+    grid-template-columns: repeat (1, 100%);
+    grid-template-rows: repeat (3, auto);
     grid-template-areas:
     "bloque1"
     "bloque2"
@@ -77,6 +78,7 @@ footer
 grid-area: bloque1;
 display: flex;
 flex-direction: row;
+flex-wrap: wrap;
 }
 
 .disponibilidad{
@@ -151,28 +153,34 @@ aside
 }
 
 .texto {
+    display: flex;
     margin: 2px;
     padding: 2px;
-    height: 200px;
     background-color: #073b3a;
     align-items: center;
+    font-size:xx-small;
+    justify-content: center;
 }
 .tarjetas{
     width: 320px;
     display: flex;
 }
+.comentarios{
+    
+    height: 576px;
+
+}
 form
     {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-items: center;
     opacity: 70%;
     color: rgb(0, 0, 0);
     font-weight: bold;
     text-decoration: double;
     background-color: bisque;
-    width: 320px;
-    margin-left: 50px;
+    width: 100%;
     
 }
 
@@ -340,6 +348,7 @@ padding: 5px;
 height: 100px;
 background-color: #073b3a;
 align-items: center;
+font-size: large;
 }
 .fondo
 {

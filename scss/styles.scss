@@ -29,10 +29,6 @@ a {
     width: 100%;
     background-color: #0B6E4F;
 }                   
-header img
-{
-    margin-left: 8px;
-}
 h1 
 {
     display: flex;
@@ -59,71 +55,64 @@ footer
     width: 3210px;
     flex-wrap: wrap;
     justify-content: center;
-
 }   
-.grids
-{
-    display: grid;
-    grid-template-columns: repeat (1, 100%);
-    grid-template-rows: repeat (3, auto);
-    grid-template-areas:
-    "bloque1"
-    "bloque2"
-    "bloque3"
-    ;
-}
 .imagenes
 {
-grid-area: bloque1;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 }
 
-.disponibilidad{
-grid-area: bloque2;
-display: flex;
-}
 #orientacion{
-    grid-area: bloque3;
     display: flex;
     flex-direction: column;
     width: 100vw;
 }
-
 .links 
 {
     display: flex;
     justify-content: space-evenly;
     background-color:darkgoldenrod;
     }
-.foto1 
-{
-    width: 320px;
-}
-.foto2
-{
-    display: none;
-}
-.foto3
-{
-    display: none;
-}
 aside
 {
     background-color: #0B6E4F;
     display:flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-items: center;
     align-items: center;
-
+        img{
+            margin-left: 25px;
+            }
+            ul{
+                display: flex; 
+                flex-direction: column;
+                list-style-type: none;
+                font-size: 8px;
+                justify-content: center;
+                align-items: center;
+                margin: 5px;
+                padding: 2px;
+                }
+                    p
+                    {
+                    font-size: 12px;
+                    }
+                        p2{
+                        margin-left: 2px;
+                        font-size: 15px;
+                        }
 }
 .disponibilidad img
 {
-    width: 150px;
+    width: 50px;
     display: flex;    
     
 }
-
+a.contacto:hover
+{
+    color: white;
+}
 .contacto
 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    
@@ -163,6 +152,7 @@ aside
 .tarjetas{
     width: 320px;
     display: flex;
+    justify-content: center;
 }
 .comentarios{
     
@@ -186,15 +176,6 @@ form
 
 @media (min-width: 1024px)
 {
-.container-fluid{
-    background-color: darkgoldenrod;
-    width: 100vw;
-    height: 100px;
-    font-size:25px;
-    justify-content: space-evenly;
-    
-}
-
 .header
     {
     display: flex;
@@ -230,55 +211,41 @@ form
     background-color:darkgoldenrod;
     font-size:25px;
     }
-
-}
-.imagenes .foto1
-{
-    width: 500px;
-    border-style: solid;
-    border-color: rgb(90, 5, 19);
-    border-width:5px;
-}
-
-.imagenes img
-{
-    display: flex;
-    width: 500px;
-    height: 300px;
-    margin-left: 90px;
-    margin-top: 100px;
-    
-    ;
-    }
-.imagenes .foto2
-{
-    display: block;
-    width: 500px;
-    border: solid;
-    border-color: rgb(90, 5, 19);
-    border-width: 5px;
-    
-}
-.imagenes .foto3
-{
-    display: block;
-    width: 500px;
-    border: solid;
-    border-color: rgb(90, 5, 19);
-    border-width: 5px;
-    
-}
 h1
 {
     font-size: 20px;
     margin: 5px;
     justify-content: center;
 }
-aside
+aside 
 {
     display: flex;
     justify-content: space-evenly;
+    flex-direction: row;
     background-image: linear-gradient(to bottom, green, darkgoldenrod);
+    align-items: center;
+        ul{
+            font-size: large;
+            
+                .lista1{
+                font-size: large;
+                list-style-type: none;
+                        }
+                .lista2{
+                    list-style-type: none;
+                    font-size: large;
+                        }}
+                    p{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 30px;
+                        p2{
+                        align-items: center;
+                        font-size: 25px;
+                            img{
+                            width: 200px;}
+                        }}
 }
 form
     {
@@ -288,12 +255,6 @@ form
     justify-content: center;
     margin-left: 300px;
     }
-.disponibilidad
-{
-    width: 1920px;
-    height: 200px;
-    
-    }  
 .mapa{
     width: 800px;
 } 
@@ -338,9 +299,9 @@ form
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
     gap: 5px;
 }
+
 .texto {
 margin: 5px;
 padding: 5px;
@@ -352,6 +313,18 @@ font-size: large;
 .fondo
 {
 display: flex;
-width: 1920px;
+width: 100px;
 justify-content: center;
+background-repeat: no-repeat;
+}
+#carouselExampleControls{
+    width: 1000px;
+    margin: 0 auto;
+}
+.carousel-control-next-icon{
+    background-color: #0B6E4F;
+}
+.carousel-control-prev-icon{
+    background-color: #0B6E4F;
+}
 }

@@ -25,9 +25,6 @@ a {
   width: 100%;
   background-color: #0B6E4F; }
 
-header img {
-  margin-left: 8px; }
-
 h1 {
   display: flex;
   text-align: center;
@@ -51,24 +48,12 @@ footer {
   flex-wrap: wrap;
   justify-content: center; }
 
-.grids {
-  display: grid;
-  grid-template-columns: repeat 1, 100%;
-  grid-template-rows: repeat 3, auto;
-  grid-template-areas: "bloque1" "bloque2" "bloque3"; }
-
 .imagenes {
-  grid-area: bloque1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
 
-.disponibilidad {
-  grid-area: bloque2;
-  display: flex; }
-
 #orientacion {
-  grid-area: bloque3;
   display: flex;
   flex-direction: column;
   width: 100vw; }
@@ -78,24 +63,35 @@ footer {
   justify-content: space-evenly;
   background-color: darkgoldenrod; }
 
-.foto1 {
-  width: 320px; }
-
-.foto2 {
-  display: none; }
-
-.foto3 {
-  display: none; }
-
 aside {
   background-color: #0B6E4F;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-items: center;
   align-items: center; }
+  aside img {
+    margin-left: 25px; }
+  aside ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    font-size: 8px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 2px; }
+  aside p {
+    font-size: 12px; }
+  aside p2 {
+    margin-left: 2px;
+    font-size: 15px; }
 
 .disponibilidad img {
-  width: 150px;
+  width: 50px;
   display: flex; }
+
+a.contacto:hover {
+  color: white; }
 
 .contacto {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -129,7 +125,8 @@ aside {
 
 .tarjetas {
   width: 320px;
-  display: flex; }
+  display: flex;
+  justify-content: center; }
 
 .comentarios {
   height: 576px; }
@@ -146,12 +143,6 @@ form {
   width: 100%; }
 
 @media (min-width: 1024px) {
-  .container-fluid {
-    background-color: darkgoldenrod;
-    width: 100vw;
-    height: 100px;
-    font-size: 25px;
-    justify-content: space-evenly; }
   .header {
     display: flex;
     justify-content: space-evenly;
@@ -177,104 +168,88 @@ form {
     justify-content: space-evenly;
     align-items: center;
     background-color: darkgoldenrod;
-    font-size: 25px; } }
-
-.imagenes .foto1 {
-  width: 500px;
-  border-style: solid;
-  border-color: #5a0513;
-  border-width: 5px; }
-
-.imagenes img {
-  display: flex;
-  width: 500px;
-  height: 300px;
-  margin-left: 90px;
-  margin-top: 100px; }
-
-.imagenes .foto2 {
-  display: block;
-  width: 500px;
-  border: solid;
-  border-color: #5a0513;
-  border-width: 5px; }
-
-.imagenes .foto3 {
-  display: block;
-  width: 500px;
-  border: solid;
-  border-color: #5a0513;
-  border-width: 5px; }
-
-h1 {
-  font-size: 20px;
-  margin: 5px;
-  justify-content: center; }
-
-aside {
-  display: flex;
-  justify-content: space-evenly;
-  background-image: linear-gradient(to bottom, green, darkgoldenrod); }
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 1200px;
-  justify-content: center;
-  margin-left: 300px; }
-
-.disponibilidad {
-  width: 1920px;
-  height: 200px; }
-
-.mapa {
-  width: 800px; }
-
-.youtube {
-  width: 800px; }
-
-.mapayoutube {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around; }
-
-.descripcion {
-  width: 1920px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-style: italic;
-  text-align: justify;
-  font-size: medium; }
-
-.contacto {
-  display: flex;
-  height: 100px;
-  font-size: 40px;
-  align-items: center; }
-
-.tarjetas {
-  margin-left: 400px;
-  width: 1000px;
-  height: 180px; }
-
-.galeria img {
-  width: 400px;
-  height: 250px; }
-
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 5px; }
-
-.texto {
-  margin: 5px;
-  padding: 5px;
-  height: 100px;
-  background-color: #073b3a;
-  align-items: center;
-  font-size: large; }
-
-.fondo {
-  display: flex;
-  width: 1920px;
-  justify-content: center; }
+    font-size: 25px; }
+  h1 {
+    font-size: 20px;
+    margin: 5px;
+    justify-content: center; }
+  aside {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    background-image: linear-gradient(to bottom, green, darkgoldenrod);
+    align-items: center; }
+    aside ul {
+      font-size: large; }
+      aside ul .lista1 {
+        font-size: large;
+        list-style-type: none; }
+      aside ul .lista2 {
+        list-style-type: none;
+        font-size: large; }
+    aside p {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 30px; }
+      aside p p2 {
+        align-items: center;
+        font-size: 25px; }
+        aside p p2 img {
+          width: 200px; }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    justify-content: center;
+    margin-left: 300px; }
+  .mapa {
+    width: 800px; }
+  .youtube {
+    width: 800px; }
+  .mapayoutube {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+  .descripcion {
+    width: 1920px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    text-align: justify;
+    font-size: medium; }
+  .contacto {
+    display: flex;
+    height: 100px;
+    font-size: 40px;
+    align-items: center; }
+  .tarjetas {
+    margin-left: 400px;
+    width: 1000px;
+    height: 180px; }
+  .galeria img {
+    width: 400px;
+    height: 250px; }
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5px; }
+  .texto {
+    margin: 5px;
+    padding: 5px;
+    height: 100px;
+    background-color: #073b3a;
+    align-items: center;
+    font-size: large; }
+  .fondo {
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    background-repeat: no-repeat; }
+  #carouselExampleControls {
+    width: 1000px;
+    margin: 0 auto; }
+  .carousel-control-next-icon {
+    background-color: #0B6E4F; }
+  .carousel-control-prev-icon {
+    background-color: #0B6E4F; } }

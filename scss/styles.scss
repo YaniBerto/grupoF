@@ -41,14 +41,14 @@ h1
     
 }
 .footer{
-    background-color: #DDB771;
-    
+    background-color:#0B6E4F;
 }
 footer
 {
     display: flex;
     justify-content: center;
-} 
+}
+
 .fondo{
     background-image: url(./imagenes/HAMAY/COMPLEJO/Vasantarelli-web-42.jpg);
     display: flex;
@@ -56,24 +56,11 @@ footer
     flex-wrap: wrap;
     justify-content: center;
 }   
-.imagenes
-{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-}
-
 #orientacion{
     display: flex;
     flex-direction: column;
     width: 100vw;
 }
-.links 
-{
-    display: flex;
-    justify-content: space-evenly;
-    background-color:darkgoldenrod;
-    }
 aside
 {
     background-color: #0B6E4F;
@@ -119,7 +106,6 @@ a.contacto:hover
     background-color: #DDB771;
     display: flex;
     justify-content: center;
-
 }
 .mapa 
 {
@@ -139,7 +125,6 @@ a.contacto:hover
 {
     width: 150px; height: 100px;
 }
-
 .texto {
     display: flex;
     margin: 2px;
@@ -154,11 +139,10 @@ a.contacto:hover
     display: flex;
     justify-content: center;
 }
-.comentarios{
+/*.comentarios{
     
     height: 576px;
-
-}
+}*/
 form
     {
     display: flex;

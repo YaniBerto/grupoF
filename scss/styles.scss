@@ -5,6 +5,7 @@
     max-width: 100%;
     font-family: 'Open Sans', sans-serif;
     }
+@import "variables";
 
 .textogrande
 {
@@ -14,7 +15,7 @@
     font-weight:bolder;
     color: #DDB771;
     margin-left: 20px;
-}
+    }
 a {
     text-decoration: none;
     color:#0B6E4F;
@@ -26,8 +27,8 @@ a {
     justify-items: center;
     align-items: center;
     color: rgb(175, 79, 1);
-    width: 100%;
-    background-color: #0B6E4F;
+    width: 320px;
+    background-color: $color-fondo-header;
 }                   
 h1 
 {
@@ -40,22 +41,22 @@ h1
     size: 50px;
     
 }
+.fondo{
+    display: flex;
+    background-image: url(../imagenes/HAMAY/COMPLEJO/Vasantarelli-web-42.jpg);
+    width: 320px;
+    
+}  
 .footer{
     background-color:#0B6E4F;
 }
 footer
 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
-.fondo{
-    background-image: url(./imagenes/HAMAY/COMPLEJO/Vasantarelli-web-42.jpg);
-    display: flex;
-    width: 3210px;
-    flex-wrap: wrap;
-    justify-content: center;
-}   
 #orientacion{
     display: flex;
     flex-direction: column;
@@ -128,11 +129,12 @@ a.contacto:hover
     display: flex;
     margin: 2px;
     padding: 2px;
-    background-color: #073b3a;
+    background-color: $color-fondo-descripcion;
     align-items: center;
     font-size:xx-small;
     justify-content: center;
 }
+
 .tarjetas{
     width: 320px;
     display: flex;
@@ -148,7 +150,8 @@ form
     font-weight: bold;
     text-decoration: double;
     background-color: bisque;
-    width: 100%;
+    width: 200px;
+    margin-left: 10px;
     
 }
 
@@ -161,7 +164,7 @@ form
     justify-content: space-evenly;
     color: rgb(175, 79, 1);
     width: 1920px;
-    background-color: #0B6E4F;
+    background-color: $color-fondo-header;
         }
 .header img
     {
@@ -179,17 +182,7 @@ form
     color: #DDB771;
     margin-left: 20px;
 }
-.links 
-{
-    
-    width: 100vw;
-    height: 100px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color:darkgoldenrod;
-    font-size:25px;
-    }
+
 h1
 {
     font-size: 20px;
@@ -228,10 +221,8 @@ aside
 form
     {
     display: flex;
-    flex-direction: column;
-    width: 1200px;
+    width: 800px;
     justify-content: center;
-    margin-left: 300px;
     }
 .mapa{
     width: 800px;
@@ -284,16 +275,23 @@ form
 margin: 5px;
 padding: 5px;
 height: 100px;
-background-color: #073b3a;
+background-color: $color-fondo-descripcion;
 align-items: center;
 font-size: large;
 }
+.footer{
+    display: flex;
+}
 .fondo
 {
-display: flex;
-width: 100px;
-justify-content: center;
 background-repeat: no-repeat;
+
+}
+.fondo img{
+    display: flex;
+    width: 1200px;
+    opacity: 70%;
+    margin-left: 50px;
 }
 #carouselExampleControls{
     width: 1000px;

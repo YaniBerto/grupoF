@@ -49,11 +49,10 @@ h1
 }  
 .footer{
     background-color:#0B6E4F;
-}
+    }
 footer
 {
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
@@ -135,9 +134,10 @@ a.contacto:hover
     justify-content: center;
 }
 
-.tarjetas{
+#tarjetas{
     width: 320px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 form
@@ -150,20 +150,21 @@ form
     font-weight: bold;
     text-decoration: double;
     background-color: bisque;
-    width: 200px;
+    width: 300px;
     margin-left: 10px;
     
 }
 
 
-@media (min-width: 1024px)
+@media (min-width: 992px)
 {
 .header
     {
     display: flex;
     justify-content: space-evenly;
     color: rgb(175, 79, 1);
-    width: 1920px;
+    width: 100vw;
+    height: auto;
     background-color: $color-fondo-header;
         }
 .header img
@@ -218,11 +219,15 @@ aside
                             width: 200px;}
                         }}
 }
+
 form
     {
     display: flex;
+    flex-direction: column;
     width: 800px;
+    height: 700px;
     justify-content: center;
+    margin-left: 250px;
     }
 .mapa{
     width: 800px;
@@ -252,13 +257,17 @@ form
     font-size: 40px;
     align-items: center;
 }
-.tarjetas
+#tarjetas /*cree este id para acomodar las imagenes de tarjetas de credito*/
 {
-    margin-left: 400px;
-    width: 1000px;
-    height: 180px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
     }  
-
+#tarjetas img{
+    width: 150px;
+    height: 100px;
+}
 .galeria img
 {
     width: 400px;
@@ -279,19 +288,18 @@ background-color: $color-fondo-descripcion;
 align-items: center;
 font-size: large;
 }
-.footer{
+footer{
     display: flex;
+    width: 100vw;
+    justify-content: center;
+    background-color: #0B6E4F;
 }
-.fondo
+.fondo /*centre la imagen*/
 {
+display: flex;
 background-repeat: no-repeat;
-
-}
-.fondo img{
-    display: flex;
-    width: 1200px;
-    opacity: 70%;
-    margin-left: 50px;
+width: 100vw; 
+margin-left: 300px;
 }
 #carouselExampleControls{
     width: 1000px;

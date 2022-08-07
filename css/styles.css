@@ -5,6 +5,68 @@
   font-family: "Open Sans", sans-serif;
 }
 
+/*agregue if*/
+body {
+  background-color: none;
+}
+
+/*maps*/
+/*bucle*/
+.btn--twitter {
+  background-color: #55acee;
+  width: 50px;
+  height: 30px;
+}
+
+.btn--instagram {
+  background-color: #3a5795;
+  width: 50px;
+  height: 30px;
+}
+
+.btn--send-mail {
+  background-color: #C25E30;
+  width: 50px;
+  height: 30px;
+}
+
+i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  color: aliceblue;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.whatsapp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: green;
+  color: rgb(255, 255, 255);
+  border-radius: 50px;
+  border-color: #DDB771;
+  border-style: double;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
+}
+
+.whatsapp-icon {
+  justify-content: center;
+}
+
 .textogrande {
   font-family: "Boogaloo", cursive;
   width: 400px;
@@ -123,6 +185,7 @@ a.contacto:hover {
 }
 
 .texto {
+  font-family: "boogaloo" cursive;
   display: flex;
   margin: 2px;
   padding: 2px;
@@ -153,6 +216,70 @@ form {
 }
 
 @media (min-width: 992px) {
+  body {
+    background-color: none;
+  }
+  /*maps*/
+  /*bucle*/
+  .btn--twitter {
+    background-color: #55acee;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 80px;
+  }
+  .btn--instagram {
+    background-color: #3a5795;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 80px;
+  }
+  .btn--send-mail {
+    background-color: #C25E30;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 80px;
+  }
+  /*map get*/
+  /*mixin*/
+  .texto1 {
+    width: 200px;
+    height: 400px;
+  }
+  .button {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  i .fa {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    color: aliceblue;
+  }
+  .whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: green;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    border-color: #DDB771;
+    border-style: double;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+  }
+  .whatsapp-icon {
+    justify-content: center;
+  }
   .header {
     display: flex;
     justify-content: space-evenly;
@@ -190,7 +317,7 @@ form {
   aside ul {
     font-size: large;
   }
-  aside ul .lista1 {
+  aside ul .lista1, aside ul .listactividades {
     font-size: large;
     list-style-type: none;
   }
@@ -211,13 +338,14 @@ form {
   aside p p2 img {
     width: 200px;
   }
+  /*extend*/
   form {
     display: flex;
     flex-direction: column;
     width: 800px;
     height: 700px;
     justify-content: center;
-    margin-left: 250px;
+    margin: 0 auto;
   }
   .mapa {
     width: 800px;
@@ -270,6 +398,7 @@ form {
     background-color: #073b3a;
     align-items: center;
     font-size: large;
+    font-family: "boogaloo" cursive;
   }
   footer {
     display: flex;
@@ -280,8 +409,10 @@ form {
   .fondo {
     display: flex;
     background-repeat: no-repeat;
-    width: 100vw;
-    margin-left: 300px;
+    width: 90%;
+    margin: 0 auto;
+    background-size: cover;
+    justify-items: center;
   }
   #carouselExampleControls {
     width: 1000px;

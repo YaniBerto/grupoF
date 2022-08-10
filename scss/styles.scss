@@ -23,11 +23,12 @@ $redes: ( twitter: #55acee,
 /*bucle*/
 @each $red, $color in $redes {
     .btn--#{$red}
-            {background-color: $color;
+            {   color: $color;
                 width: 50px;
                 height: 30px;
                 }
         }
+        
 i {
     display: flex;
     justify-content: center;
@@ -213,74 +214,74 @@ form
 
 
 @media (min-width: 992px)
-{
+{  
+    $fueraTemporada: normal;
+    $temporada: temporada;
+
     body {
-        @if $fueraTemporada == sinfondo {
+        @if $fueraTemporada == normal {
             background-color: none;}
             @else {
                 background-color:#DDB771;
-            }
-    }
-    /*maps*/
-    $redes: ( twitter: #55acee,
-            instagram: #3a5795,
-            send-mail: #C25E30);
+            }}
+    
+    /*map*/
+    $actividades: (Paseos en lancha: #55acee,
+                Alquiler de Kayak: red,
+                Excursiones de pesca: green,
+                Excursion de turismo aventura: yellow, 
+                Visita fabrica cerveza artesanal: orange,
+           );
     /*bucle*/
-    @each $red, $color in $redes {
-        .btn--#{$red}
-                {background-color: $color;
-                    display: flex;
-                    justify-content: center;
-                    width: 100px;
-                    height: 80px;
+    @each $actividad, $color in $actividades {
+        .btn--#{$actividad}
+                {   background-color: $color;
+                    
                     }
             }
     /*map get*/
-    p2{
-        background-color: map-get($redes, color);
+    p2 {
+        text-decoration: map-get($actividades, Paseos en lancha);
         }
     /*mixin*/
-    @mixin nosotros($ancho, $alto) {
+    @mixin nosotros($colorfondo,$ancho, $alto) {
+        color: $colorfondo;
         width: $ancho;
         height: $alto;
         }   
     .texto1 {
-        @include nosotros(200px, 400px);
+        @include nosotros(#ddb771, 200px, 400px);
     }
+    /*extend*/    
+.listactividades {
+    @extend .lista1;
 
-    
-    .button{
+}
+
+.button{
         display: flex;
         flex-direction: row;
+        margin-top: 5px;
+        margin-bottom: 5px;
         width:100%;
-        justify-content: space-evenly;
-    } 
-    i .fa {
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        width: 150px;
         height: 150px;
-        color: aliceblue;
-    }            
-    .whatsapp {
+        justify-content: space-evenly;
+        }
+
+.whatsapp {
         position:fixed;
         width:60px;
         height:60px;
-        bottom:40px;
-        right:40px;
         background-color: green;
         color:rgb(255, 255, 255);
-        border-radius:50px;
         border-color: #DDB771;
-        border-style: double;
-        text-align:center;
+        border-style:solid;
         font-size:30px;
-        z-index:100;
     }
     
-    .whatsapp-icon {
+.whatsapp-icon {
         justify-content: center;
+        align-items: center;
     }    
 .header
     {
@@ -343,10 +344,7 @@ aside
                             width: 200px;}
                         }}
 }
-/*extend*/    
-.listactividades {
-    @extend .lista1;
-}
+
 form
     {
     display: flex;
@@ -374,8 +372,11 @@ form
     width: 1920px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
+    list-style-type: none;
     text-align: justify;
-    font-size: medium;
+    font-size: xx-large;
+    align-items: center;
+    background-color: #DDB771;
 }
 .contacto
 {
@@ -388,6 +389,8 @@ form
 {
     width: 100%;
     display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
     justify-content: space-evenly;
     flex-direction: row;
     }  
@@ -431,6 +434,9 @@ margin: 0 auto;
 background-size: cover;
 justify-items: center;
 }
+ 
+i {color: green};
+
 #carouselExampleControls{
     width: 1000px;
     margin: 0 auto;

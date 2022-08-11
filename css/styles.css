@@ -221,32 +221,33 @@ form {
   }
   /*map*/
   /*bucle*/
-  .btn--Paseos en lancha {
-    background-color: #55acee;
+  .btn--Paseosenlancha {
+    color: #55acee;
   }
-  .btn--Alquiler de Kayak {
-    background-color: red;
+  .btn--AlquilerdeKayak {
+    color: red;
   }
-  .btn--Excursiones de pesca {
-    background-color: green;
+  .btn--Excursionesdepesca {
+    color: green;
   }
-  .btn--Excursion de turismo aventura {
-    background-color: yellow;
+  .btn--Excursiondeturismoaventura {
+    color: yellow;
   }
-  .btn--Visita fabrica cerveza artesanal {
-    background-color: orange;
+  .btn--Visitafabricacervezaartesanal {
+    color: orange;
   }
   /*map get*/
-  p2 {
-    text-decoration: #55acee;
+  .lista1, .listactividades {
+    list-style-type: none;
+    font-size: x-large;
   }
+  /*extend*/
   /*mixin*/
   .texto1 {
     color: #ddb771;
     width: 200px;
     height: 400px;
   }
-  /*extend*/
   .button {
     display: flex;
     flex-direction: row;

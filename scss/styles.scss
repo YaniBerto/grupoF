@@ -226,23 +226,33 @@ form
             }}
     
     /*map*/
-    $actividades: (Paseos en lancha: #55acee,
-                Alquiler de Kayak: red,
-                Excursiones de pesca: green,
-                Excursion de turismo aventura: yellow, 
-                Visita fabrica cerveza artesanal: orange,
-           );
+    $actividades: (Paseosenlancha: #55acee,
+                AlquilerdeKayak: red,
+                Excursionesdepesca: green,
+                Excursiondeturismoaventura: yellow, 
+                Visitafabricacervezaartesanal: orange,
+);
     /*bucle*/
     @each $actividad, $color in $actividades {
         .btn--#{$actividad}
-                {   background-color: $color;
+                {   color: $color;
                     
                     }
             }
-    /*map get*/
-    p2 {
-        text-decoration: map-get($actividades, Paseos en lancha);
+
+/*map get*/
+    .p2 {
+        $color: map-get ($actividades, Paseosenlancha);
         }
+
+.lista1{
+    list-style-type: none;
+    font-size: x-large;
+}       
+/*extend*/ 
+.listactividades {
+    @extend .lista1 }  
+
     /*mixin*/
     @mixin nosotros($colorfondo,$ancho, $alto) {
         color: $colorfondo;
@@ -252,12 +262,6 @@ form
     .texto1 {
         @include nosotros(#ddb771, 200px, 400px);
     }
-    /*extend*/    
-.listactividades {
-    @extend .lista1;
-
-}
-
 .button{
         display: flex;
         flex-direction: row;
@@ -434,7 +438,7 @@ margin: 0 auto;
 background-size: cover;
 justify-items: center;
 }
- 
+
 i {color: green};
 
 #carouselExampleControls{

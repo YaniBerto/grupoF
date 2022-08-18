@@ -17,43 +17,21 @@ body {
             background-color:#DDB771;
         }}
 
-/*map*/
-$actividades: (Paseosenlancha: #55acee,
-            AlquilerdeKayak: red,
-            Excursionesdepesca: green,
-            Excursiondeturismoaventura: yellow, 
-            Visitafabricacervezaartesanal: orange,
-);
-/*bucle*/
-@each $actividad, $color in $actividades {
-    .btn--#{$actividad}
-            {   color: $color;
-                
-                }
-        }
-
-/*map get*/
-.p2 {
-    $color: map-get ($actividades, Paseosenlancha);
-    }
 .button i {
     display: flex;
-    justify-content: center;
-    margin-left: 100px;
-    align-content: center;
-    width: 150px;
-    height: 150px;}
+  
+    width: 100%;
+    height: auto;}
 i.fa-brands fa-whatsapp {
         fill: #DDB771;}
 
 .button{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    margin-left: 30px;
-    margin: auto;
-}     
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    }     
 .whatsapp {
     position:fixed;
     width:60px;
@@ -75,16 +53,17 @@ i.fa-brands fa-whatsapp {
 .btn--instagram{color: violet}
 .btn--send-mail{color:brown}
 .whatsapp-icon {
-    justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
 .textogrande
 {
     font-family: 'Boogaloo', cursive; 
-    width: 400px;
+    width: 100%;
     font-size: large;
     font-weight:bolder;
     color: #DDB771;
-    margin-left: 20px;
+    margin-left: 4%;
     }
 a {
     text-decoration: none;
@@ -93,11 +72,12 @@ a {
 .header
 {
     display:flex;
+    flex-direction: row;
     justify-content: space-between;
     justify-items: center;
     align-items: center;
     color: rgb(175, 79, 1);
-    width: 320px;
+    width: 100%;
     background-color: $color-fondo-header;
 }                   
 h1 
@@ -105,16 +85,15 @@ h1
     display: flex;
     text-align: center;
     justify-content: first baseline;
-    padding: 2px;
+    padding: 5%;
     font-family: 'Lucida Sans', cursive;
-    color: #DDB771;
-    size: 50px;
-    
+    font-size: medium;
+    color: #DDB771;    
 }
 .fondo{
     display: flex;
     background-image: url(../imagenes/HAMAY/COMPLEJO/Vasantarelli-web-42.jpg);
-    width: 320px;
+    width: 100%;
     
 }  
 .footer{
@@ -140,7 +119,7 @@ aside
     justify-items: center;
     align-items: center;
         img{
-            margin-left: 25px;
+            margin-left: 20%;
             }
             ul{
                 display: flex; 
@@ -157,7 +136,7 @@ aside
                     font-size: 12px;
                     }
                         p2{
-                        margin-left: 2px;
+                        margin-left: 2%;
                         font-size: 15px;
                         }
 }
@@ -179,10 +158,11 @@ a.contacto:hover
 }
 .mapa 
 {
-    width: 320px; 
-    display: flex;   
+    width: 100%; 
     }
-
+.youtube{
+    width: 100%;
+}
 .galeria
 {
     display: flex;
@@ -193,32 +173,29 @@ a.contacto:hover
 }
 .galeria img
 {
-    width: 150px; height: 100px;
+    width: 100%;
+    height: auto;
 }
-.listactividades{
-                display: flex;
-                flex-direction: column;
-                list-style-type: none;
-                font-size: large;
-                line-height: 80px;
-                justify-content: center;   
-            }
+
 .texto {
-    font-family: 'boogaloo' cursive;
-    display: flex;
-    margin: 2px;
-    padding: 2px;
+    font-family: "Open sans", sans-serif;
+    font-style: italic;
+    display: flex; 
+    margin: 4px;
+    padding: 4px;
     background-color: $color-fondo-descripcion;
     align-items: center;
-    font-size:xx-small;
+    font-size:small;
     justify-content: center;
 }
+
 .textomediano {
     @extend .texto;
     font-size: large;
+    text-decoration: #DDB771;
 }
 #tarjetas{
-    width: 320px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -226,7 +203,10 @@ a.contacto:hover
 .descripcion{ 
     display: flex;
     justify-content: center;                    
-    margin: 20px;}
+    margin: 0 auto;
+    padding: 20px;
+    background-color: cornsilk;
+}
 form
     {
     display: flex;
@@ -237,12 +217,37 @@ form
     font-weight: bold;
     text-decoration: double;
     background-color: bisque;
-    width: 300px;
-    margin-left: 10px;
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
     
 }
+.card{
+    background-color: rgb(171, 189, 197);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.card_img{
+    display: flex;
+    margin-top: 3%;
+    width: 90%;
+    height: auto;
+}
+.card_parrafo{
+    display: flex;
+    color: black;
+    font-size: small;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 2%;
+    text-align: center;
 
 
+}
 @media (min-width: 992px)
 { 
     $fueraTemporada: normal;
@@ -411,18 +416,35 @@ form
     width: 150px;
     height: 100px;
 }
-.galeria img
+.caja_galeria
 {
-    width: 400px;
-    height: 250px;
-}    
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #0B6E4F;
+    width: 100%;
+}
 .galeria{ 
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 5px;
+    justify-content: space-around;
 }
-
+.galeria img
+{
+    display: flex;
+    border-color:#DDB771;
+    border-style: solid;
+    border-radius: 1%;
+    margin: 1%;
+    width: 30%;
+    height: auto;
+    transition: 0.5s;
+    object-fit: cover;
+    }    
+img:hover{
+    transform: scale(1.2)
+}
 .texto {
 margin: 5px;
 padding: 5px;
@@ -485,4 +507,36 @@ justify-items: center;
 .carousel-control-prev-icon{
     background-color: #0B6E4F;
 }
+.caja_cards{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+.card{
+    background-color: rgb(171, 189, 197);
+    display: flex;
+    width: 800px;
+    margin-left: 50px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transform: none;
+}
+.card_img{
+    display: flex;
+    margin-top: 10px;
+    width: 70%;
+    height: auto;
+    
+}
+.card_parrafo{
+    display: flex;
+    color: black;
+    font-size: x-large;
+    font-family: "Open Sans", sans-serif;
+    justify-items: center;
+    align-items: center;
+}
+
 }

@@ -6,7 +6,6 @@
     font-family: 'Open Sans', sans-serif;
     }
 @import "variables";
-/*agregue if*/
 $fueraTemporada: normal;
 $temporada: temporada;
 
@@ -16,22 +15,12 @@ body {
         @else {
             background-color:#DDB771;
         }}
-
-.button i {
-    display: flex;
-  
-    width: 100%;
-    height: auto;}
-i.fa-brands fa-whatsapp {
-        fill: #DDB771;}
-
 .button{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     width: 100%;
-    }     
+    height: auto;
+    background-color: #DDB771;
+}
+
 .whatsapp {
     position:fixed;
     width:60px;
@@ -48,10 +37,6 @@ i.fa-brands fa-whatsapp {
     font-size:30px;
     z-index:100;
 }
-
-.btn--twitter {color: rgb(83, 186, 251);}
-.btn--instagram{color: violet}
-.btn--send-mail{color:brown}
 .whatsapp-icon {
     align-items: center;
     justify-items: center;
@@ -104,12 +89,6 @@ footer
 {
     display: flex;
     justify-content: center;
-}
-
-#orientacion{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
 }
 aside
 {
@@ -196,9 +175,10 @@ a.contacto:hover
 }
 #tarjetas{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 20%;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 .descripcion{ 
     display: flex;
@@ -277,8 +257,9 @@ form
 .button{
         display: flex;
         flex-direction: row;
+        background-color: #DDB771;
         width:100%;
-        height: 100px;
+        height: auto;
         justify-content: space-evenly;
         }
 
@@ -403,10 +384,11 @@ form
     font-size: 40px;
     align-items: center;
 }
-#tarjetas /*cree este id para acomodar las imagenes de tarjetas de credito*/
-{
+#tarjetas {
     width: 100%;
+    height: auto;
     display: flex;
+    background-color: black;
     margin-top: 5px;
     margin-bottom: 5px;
     justify-content: space-evenly;
@@ -472,11 +454,11 @@ color:#DDB771
 footer {
     display: flex;
     flex-direction: row;
-    width: 1900px;
+    width: 100%;
     justify-content: center;
     background-color: #0B6E4F;
 }
-.fondo /*centre la imagen*/
+.fondo
 {
 display: flex;
 background-repeat: no-repeat;

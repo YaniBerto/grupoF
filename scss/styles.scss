@@ -15,11 +15,6 @@ body {
         @else {
             background-color:#DDB771;
         }}
-.button{
-    width: 100%;
-    height: auto;
-    background-color: #DDB771;
-}
 
 .whatsapp {
     position:fixed;
@@ -58,13 +53,13 @@ a {
 {
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     justify-items: center;
     align-items: center;
     color: rgb(175, 79, 1);
     width: 100%;
     background-color: $color-fondo-header;
-}                   
+}
 h1 
 {
     display: flex;
@@ -79,6 +74,7 @@ h1
     display: flex;
     background-image: url(../imagenes/HAMAY/COMPLEJO/Vasantarelli-web-42.jpg);
     width: 100%;
+    height: 80vh;
     
 }  
 .footer{
@@ -94,9 +90,12 @@ aside
 {
     background-color: #0B6E4F;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-items: center;
     align-items: center;
+    word-wrap: break-word;
+    margin-right: 5px;
+
         img{
             margin-left: 20%;
             }
@@ -104,11 +103,8 @@ aside
                 display: flex; 
                 flex-direction: column;
                 list-style-type: none;
-                font-size: 8px;
+                font-size: small;
                 justify-content: center;
-                align-items: center;
-                margin: 5px;
-                padding: 2px;
                 }
                     p
                     {
@@ -118,6 +114,11 @@ aside
                         margin-left: 2%;
                         font-size: 15px;
                         }
+}
+.disponibilidad{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 .disponibilidad img
 {
@@ -171,12 +172,13 @@ a.contacto:hover
 .textomediano {
     @extend .texto;
     font-size: large;
-    text-decoration: #DDB771;
+    color:aliceblue;
 }
 #tarjetas{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 20%;
-    flex-direction: row;
     justify-content: space-between;
 
 }
@@ -186,6 +188,7 @@ a.contacto:hover
     margin: 0 auto;
     padding: 20px;
     background-color: cornsilk;
+    height: 75vh;
 }
 form
     {
@@ -225,30 +228,41 @@ form
     font-family: "Open Sans", sans-serif;
     margin-top: 2%;
     text-align: center;
-
-
+}
+.button{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+        height: 100px;
+        background-color: #DDB771;
+    }
+.button img{
+    width: 40px;
+    height: 35px;
+    margin: 10px;
 }
 @media (min-width: 992px)
 { 
     $fueraTemporada: normal;
     $temporada: temporada;
 
-    body {
+body {
         @if $fueraTemporada == normal {
             background-color: none;}
             @else {
                 background-color:#DDB771;
             }}
     
-    /*map*/
-    $actividades: (Paseosenlancha: #55acee,
+$actividades: (Paseosenlancha: #55acee,
                 AlquilerdeKayak: red,
                 Excursionesdepesca: green,
                 Excursiondeturismoaventura: yellow, 
                 Visitafabricacervezaartesanal: orange,
 );
-    /*bucle*/
-    @each $actividad, $color in $actividades {
+@each $actividad, $color in $actividades {
         .btn--#{$actividad}
                 {   color: $color;
                     
@@ -300,6 +314,7 @@ form
 .textogrande
 {
     font-family: 'Boogaloo', cursive;
+    display: flex;
     width: 1000px;
     font-size: 50px;
     font-weight:bolder;
@@ -338,9 +353,14 @@ aside
 }
 p2 {
     align-items: center;
-    font-size: 35px;
+    font-size: large;
     img{
     width: 400px;}
+    }
+.disponibilidad{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 form
     {
@@ -352,18 +372,22 @@ form
     margin: 0 auto;
     }
 .mapa{
-    width: 800px;
+    width: 50%;
+    border-color: #0B6E4F;
+    border-style: solid;
+    border-width: 2px;
 } 
 .youtube {
-    width: 800px;
+    width: 50%;
+    border-color: #0B6E4F;
 }        
 .mapayoutube {
 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
-}         
+    height: 40vh;
+   }         
 .descripcion
 {
     display: flex;
@@ -424,8 +448,8 @@ form
     transition: 0.5s;
     object-fit: cover;
     }    
-img:hover{
-    transform: scale(1.2)
+.galeria img:hover{
+    transform: scale(1.5)
 }
 .texto {
 margin: 5px;
@@ -457,6 +481,10 @@ footer {
     width: 100%;
     justify-content: center;
     background-color: #0B6E4F;
+}
+.botonForm{
+    display: flex;
+    flex-direction: column;
 }
 .fondo
 {
@@ -494,6 +522,7 @@ justify-items: center;
             justify-content: space-evenly;
             flex-wrap: wrap;
             gap: 30px;
+            background-color: #0B6E4F;
         }
 .card{
     background-color: rgb(171, 189, 197);
@@ -503,14 +532,12 @@ justify-items: center;
     height: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    transform: none;
-}
+    }
 .card_img{
     display: flex;
     margin-top: 10px;
     width: 70%;
     height: auto;
-    
 }
 .card_parrafo{
     display: flex;
@@ -518,7 +545,7 @@ justify-items: center;
     font-size: x-large;
     font-family: "Open Sans", sans-serif;
     justify-items: center;
-    align-items: center;
+    margin-bottom: 3%;
 }
 
 }

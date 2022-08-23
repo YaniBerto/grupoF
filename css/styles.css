@@ -5,27 +5,8 @@
   font-family: "Open Sans", sans-serif;
 }
 
-/*agregue if*/
 body {
   background-color: none;
-}
-
-.button i {
-  display: flex;
-  width: 100%;
-  height: auto;
-}
-
-i.fa-brands fa-whatsapp {
-  fill: #DDB771;
-}
-
-.button {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
 }
 
 .whatsapp {
@@ -43,18 +24,6 @@ i.fa-brands fa-whatsapp {
   text-align: center;
   font-size: 30px;
   z-index: 100;
-}
-
-.btn--twitter {
-  color: rgb(83, 186, 251);
-}
-
-.btn--instagram {
-  color: violet;
-}
-
-.btn--send-mail {
-  color: brown;
 }
 
 .whatsapp-icon {
@@ -79,7 +48,7 @@ a {
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   justify-items: center;
   align-items: center;
   color: rgb(175, 79, 1);
@@ -101,6 +70,7 @@ h1 {
   display: flex;
   background-image: url(../imagenes/HAMAY/COMPLEJO/Vasantarelli-web-42.jpg);
   width: 100%;
+  height: 80vh;
 }
 
 .footer {
@@ -111,12 +81,6 @@ h1 {
 footer {
   display: flex;
   justify-content: center;
-}
-
-#orientacion {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
 }
 
 aside {
@@ -133,9 +97,8 @@ aside ul {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  font-size: 8px;
+  font-size: small;
   justify-content: center;
-  align-items: center;
   margin: 5px;
   padding: 2px;
 }
@@ -198,14 +161,15 @@ a.contacto:hover {
 
 .textomediano {
   font-size: large;
-  text-decoration: #DDB771;
+  color: aliceblue;
 }
 
 #tarjetas {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  width: 100%;
+  height: 20%;
+  justify-content: space-between;
 }
 
 .descripcion {
@@ -214,6 +178,7 @@ a.contacto:hover {
   margin: 0 auto;
   padding: 20px;
   background-color: cornsilk;
+  height: 75vh;
 }
 
 form {
@@ -257,12 +222,27 @@ form {
   text-align: center;
 }
 
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  background-color: #DDB771;
+}
+
+.button img {
+  width: 40px;
+  height: 35px;
+  margin: 10px;
+}
+
 @media (min-width: 992px) {
   body {
     background-color: none;
   }
-  /*map*/
-  /*bucle*/
   .btn--Paseosenlancha {
     color: #55acee;
   }
@@ -281,8 +261,9 @@ form {
   .button {
     display: flex;
     flex-direction: row;
+    background-color: #DDB771;
     width: 100%;
-    height: 100px;
+    height: auto;
     justify-content: space-evenly;
   }
   .whatsapp {
@@ -319,6 +300,7 @@ form {
   }
   .textogrande {
     font-family: "Boogaloo", cursive;
+    display: flex;
     width: 1000px;
     font-size: 50px;
     font-weight: bolder;
@@ -370,15 +352,20 @@ form {
     margin: 0 auto;
   }
   .mapa {
-    width: 800px;
+    width: 50%;
+    border-color: #0B6E4F;
+    border-style: solid;
+    border-width: 2px;
   }
   .youtube {
-    width: 800px;
+    width: 50%;
+    border-color: #0B6E4F;
   }
   .mapayoutube {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height: 40vh;
   }
   .descripcion {
     display: flex;
@@ -400,7 +387,9 @@ form {
   }
   #tarjetas {
     width: 100%;
+    height: auto;
     display: flex;
+    background-color: black;
     margin-top: 5px;
     margin-bottom: 5px;
     justify-content: space-evenly;
@@ -434,8 +423,8 @@ form {
     transition: 0.5s;
     object-fit: cover;
   }
-  img:hover {
-    transform: scale(1.2);
+  .galeria img:hover {
+    transform: scale(1.5);
   }
   .texto, .textomediano {
     margin: 5px;
@@ -463,7 +452,7 @@ form {
   footer {
     display: flex;
     flex-direction: row;
-    width: 1900px;
+    width: 100%;
     justify-content: center;
     background-color: #0B6E4F;
   }
@@ -502,6 +491,7 @@ form {
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 30px;
+    background-color: #0B6E4F;
   }
   .card {
     background-color: rgb(171, 189, 197);
@@ -511,7 +501,6 @@ form {
     height: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    transform: none;
   }
   .card_img {
     display: flex;
@@ -525,7 +514,7 @@ form {
     font-size: x-large;
     font-family: "Open Sans", sans-serif;
     justify-items: center;
-    align-items: center;
+    margin-bottom: 3%;
   }
 }
 
